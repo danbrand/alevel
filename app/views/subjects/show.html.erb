@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @subject.title %>
+</p>
+
+<p>
+  <strong>Subject image:</strong>
+  <%= image_tag @subject.subject_image %>
+</p>
+
+<p>
+  <strong>Subject description:</strong>
+  <%= @subject.subject_description %>
+</p>
+
+<p>
+  <strong>Student image:</strong>
+  <%= image_tag @subject.student_image %>
+</p>
+
+<p>
+  <strong>Student description:</strong>
+  <%= @subject.student_description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @subject.price %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @subject.user %>
+</p>
+<% if can? :manage, @subject %>
+  <%= link_to 'Edit', edit_subject_path(@subject) %> |
+<% end %>
+<%= link_to 'Back', subjects_path %>

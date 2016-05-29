@@ -1,0 +1,34 @@
+<ul class="nav nav-tabs">
+  <li role="presentation"><%= link_to "Users", admin_user_path %></li>
+  <li role="presentation" class="active"><%= link_to "Subjects", admin_subject_path %></li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjects.each do |subject| %>
+      <tr>
+        <td><%= subject.id %></td>
+        <td><%= subject.title %></td>
+        <td><%= subject.price %></td>
+        <td><%= subject.user.email %></td>
+        <td><%= link_to 'Show', subject %></td>
+        <% if can? :manage, @subject %>
+          <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+          <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Subject', new_subject_path, class: "btn btn-success" %>

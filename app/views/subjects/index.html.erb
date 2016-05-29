@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="subject_top_banner">
+  
+
+</div>
+
+
+<div class="row">
+  <% @subjects.each do |subject| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <a href="/subjects/<%= subject.id %>">
+          <img src="<%=subject.subject_image%>" alt="...">
+          <div class="caption">
+            <h3><%= subject.title %></h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  <% end %>
+</div>
+

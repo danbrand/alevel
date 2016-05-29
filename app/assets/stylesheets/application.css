@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*---------------------------------- FONTS ---------------------------------  */
+
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------------------- NAVBAR ---------------------------------  */
+
+.navbar-default {
+    background-color: black;
+    border-color: #E7E7E7;
+}
+
+/*---------------------------------- HOMEPAGE ---------------------------------  */
+
+.jumbotron{
+	text-align: center;
+}
+
+/*---------------------------- SIGN IN/UP PAGE -------------------------------  */
+#sign_in_window{
+	margin-top: 100px;
+	background-color: white;
+	padding: 30px 30px;
+	border-radius: 20px;
+}
+
+#sign_in_background{
+	background: url("sign_in_background.jpg") no-repeat center;	
+	background-color: #77c881;
+}
+
+/*---------------------------- SUBJECT INDEX -------------------------------  */
+
+.subject_top_banner{
+	height: 100px;
+	background-color: #f1f1f1;
+	margin-bottom: 30px;
+}
+
+
+#student_image_thumbnail{
+	height: 50px;
+	width: 50px;
+
+}

@@ -1,0 +1,25 @@
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><%= link_to "Users", admin_user_path %></li>
+  <li role="presentation"><%= link_to "Subjects", admin_subject_path %></li>
+</ul>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Email</th>
+      <th>Sign In Count</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+     	 <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= user.sign_in_count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
